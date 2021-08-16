@@ -14,10 +14,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         if(savedInstanceState==null) {
-            getSupportFragmentManager().
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.notes_container, SocialNetworkFragment.newInstance()).commit();
+            /*getSupportFragmentManager().
                     beginTransaction().
                     replace(R.id.notes_container, NotesFragment.newInstance()).
-                    commit();
+                    commit();*/
             }
         }
 
