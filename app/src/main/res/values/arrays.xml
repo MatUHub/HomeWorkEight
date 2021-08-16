@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="notes">
+        <item>Заметка 1</item>
+        <item>Заметка 2</item>
+        <item>Заметка 3</item>
+        <item>Заметка 4</item>
+        <item>Заметка 5</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>to do 1</item>
+        <item>to do 2</item>
+        <item>to do 3</item>
+        <item>to do 4</item>
+        <item>to do 5</item>
+    </string-array>
+</resources>
