@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class SocialNetworkAdapter extends RecyclerView.Adapter<SocialNetworkAdapter.MyViewHolder> {
 
-    private String[] dataSource;
+    private CardSource dataSource;
 
-    public SocialNetworkAdapter(String[] dataSource) {
+    public SocialNetworkAdapter(CardSource dataSource) {
         this.dataSource = dataSource;
     }
 
@@ -21,7 +21,7 @@ public class SocialNetworkAdapter extends RecyclerView.Adapter<SocialNetworkAdap
         this.listener = listener;
     }
 
-    public void setData() {
+    public void setData(CardSource dataSource) {
         this.dataSource = dataSource;
     }
 
@@ -33,13 +33,13 @@ public class SocialNetworkAdapter extends RecyclerView.Adapter<SocialNetworkAdap
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.textViewItem.setText(dataSource[position]);
-        holder.textViewDescription.setText(dataSource[position]);
+        holder.textViewItem.setText(dataSource.getCardData(position).getTextViewItem());
+        holder.textViewDescription.setText(dataSource.getCardData(position).getTextViewItem());
     }
 
     @Override
     public int getItemCount() {
-        return dataSource.length;
+        return dataSource.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

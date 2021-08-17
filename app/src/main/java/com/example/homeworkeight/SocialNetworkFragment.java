@@ -25,7 +25,8 @@ public class SocialNetworkFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
-        String[] data = getResources().getStringArray(R.array.notes);
+        //String[] data = getResources().getStringArray(R.array.notes);
+        CardSource data = new CardSourceImpl(getResources()).init();
         SocialNetworkAdapter socialNetworkAdapter = new SocialNetworkAdapter(data);
         socialNetworkAdapter.setOnMyOnClickListener(new MyOnClickListener() {
             @Override
